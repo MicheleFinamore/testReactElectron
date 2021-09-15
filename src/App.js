@@ -1,25 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { Navbar, Container, Nav } from "react-bootstrap";
+import { Link } from "react-router-dom";
+import "./styling/style.css";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export default class App extends React.Component {
+  render() {
+    return (
+      <div className="container">
+        <h1>Test Web/Desktop App</h1>
+        <Link to="/profile" className="linkStyle">Go to the second page</Link>
+        <div className="imageStyle">
+          <img src="https://sealink.it/wp/wp-content/uploads/2017/07/smtpb-logo-300x225.png"></img>
+        </div>
+      </div>
+    );
+  }
 }
-
-export default App;
